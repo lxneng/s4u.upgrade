@@ -1,12 +1,16 @@
+import sys
 from setuptools import setup
 from setuptools import find_packages
 
 version = '1.0'
 
-requires = [
+install_requires = [
     'setuptools',
     'venusian',
     ]
+
+if sys.version_info < (2, 7):
+    install_requires.append('argparse')
 
 setup(name='s4u.upgrade',
       version=version,
@@ -21,10 +25,9 @@ setup(name='s4u.upgrade',
       include_package_data=True,
       namespace_packages=['s4u'],
       zip_safe=False,
-      install_requires=requires,
+      install_requires=install_requires,
       test_suite='s4u.upgrade',
       entry_points='''
       [console_scripts]
       upgrade = s4u.bfgtools.upgrade:upgrade
-      '''
-      )
+      ''')
