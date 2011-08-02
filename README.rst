@@ -27,9 +27,6 @@ Here is a basic context provider which configures SQLAlchemy::
    @upgrade_context('sql')
    def setup_sqlalchemy(options):
        engine = create_engine('postgresql:///projectA')
-       sm = orm.sessionmaker(extension=ZopeTransactionExtension())
-       meta.Session = scoped_session(sm)
-       meta.Session.configure(bind=engine)
        return {'sql-engine': engine}
 
 Here is an example upgrade step to add missing tables and indices in a project
