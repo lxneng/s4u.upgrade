@@ -1,0 +1,12 @@
+*.pyc
+*.pyo
+/.coverage
+/.installed.cfg
+/.mr.developer.cfg
+/coverage.xml
+/nosetests.xml
+/dist
+/bin
+/develop-eggs
+/docs/_build
+/parts
