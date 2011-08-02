@@ -10,3 +10,4 @@
 /develop-eggs
 /docs/_build
 /parts
+/src/s4u.upgrade.egg-info
