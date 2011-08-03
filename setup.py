@@ -29,5 +29,5 @@ setup(name='s4u.upgrade',
       test_suite='s4u.upgrade',
       entry_points='''
       [console_scripts]
-      upgrade = s4u.bfgtools.upgrade:upgrade
+      upgrade = s4u.upgrade:upgrade
       ''')
